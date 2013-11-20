@@ -39,6 +39,8 @@ namespace Heal
         public HealGame()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 800;
             Content.RootDirectory = "Content";
 
             m_time = DateTime.Now;

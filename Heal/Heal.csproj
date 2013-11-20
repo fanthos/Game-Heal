@@ -61,7 +61,7 @@
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
-    <XnaCompressContent>false</XnaCompressContent>
+    <XnaCompressContent>True</XnaCompressContent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
@@ -260,6 +260,11 @@
     <ProjectReference Include="..\Heal.Data\Heal.Data.csproj">
       <Project>{157826BC-C751-433D-B6DE-2EB5212CA064}</Project>
       <Name>Heal.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Heal.Resources\Heal.Resources.contentproj">
+      <Project>{1E0CF06E-7E5D-4F8E-9DB3-DE85B7706426}</Project>
+      <Name>Heal.Resources</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

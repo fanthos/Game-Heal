@@ -162,6 +162,8 @@ namespace Heal.GameState
 
                 case ChildState.ShowRespectState:
                     {
+                        if (Input.IsPauseKeyDown())
+                            m_stateManager.GotoState(StateManager.States.MainMenuState, null);
                         //m_audioManager.LoadSong( "MusicAndSoundEffect/Music/MusicInRespectShowState", );
 
                         float count = (float) gameTime.ElapsedGameTime.TotalSeconds;
@@ -197,7 +199,7 @@ namespace Heal.GameState
                     #region Case ChildState.ShowStoryState
 
                 case ChildState.ShowStoryState:
-                    if (m_showStoryTexPackaging.IsFinished)
+                    if (m_showStoryTexPackaging.IsFinished || Input.IsPauseKeyDown())
                         m_stateManager.GotoState( StateManager.States.MainMenuState, null );
                     m_showStoryTexPackaging.Update();
                     break;

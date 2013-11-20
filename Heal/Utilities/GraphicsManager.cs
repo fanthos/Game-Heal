@@ -67,7 +67,15 @@ namespace Heal.Utilities
         public void Begin(RenderTarget2D target, Color defaultColor)
         {
         //RenderTarget2D oldTarget = (RenderTarget2D)m_batch.GraphicsDevice.GetRenderTarget(0);
-            m_finallyTarget = (RenderTarget2D)m_device.GetRenderTargets()[0].RenderTarget;
+            var renderTargets = m_device.GetRenderTargets();
+            if (renderTargets.Length == 0)
+            {
+                m_finallyTarget = null;
+            }
+            else
+            {
+                m_finallyTarget = (RenderTarget2D)renderTargets[0].RenderTarget;
+            }
             m_target.Push( m_finallyTarget );
             m_finallyTarget = target;
             m_device.SetRenderTarget(m_finallyTarget);
@@ -159,6 +167,7 @@ namespace Heal.Utilities
             effect.CurrentTechnique = effect.Techniques[param.Technique];
             //effect.Begin();
             //effect.CurrentTechnique.Passes[param.Pass].Begin();
+            effect.CurrentTechnique.Passes[param.Pass].Apply();
             m_batch.Draw(source, new Rectangle(0, 0, 800, 600), Color.White);
             m_batch.End();
             //effect.CurrentTechnique.Passes[param.Pass].End();
