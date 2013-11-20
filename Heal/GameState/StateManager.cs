@@ -177,17 +177,20 @@ namespace Heal.GameState
 
         public bool Visible { get { return true; } }
         public int DrawOrder { get { return 1; } }
-        public event EventHandler VisibleChanged;
-        public event EventHandler DrawOrderChanged;
-
+        event EventHandler<EventArgs> IDrawable.DrawOrderChanged
+        { add { } remove { } }
+        event EventHandler<EventArgs> IDrawable.VisibleChanged
+        { add { } remove { } }
         #endregion
 
         #region Implementation of IUpdateable
 
         public bool Enabled { get { return true; } }
         public int UpdateOrder { get { return 1; } }
-        public event EventHandler EnabledChanged;
-        public event EventHandler UpdateOrderChanged;
+        event EventHandler<EventArgs> IUpdateable.EnabledChanged
+        { add { } remove { } }
+        event EventHandler<EventArgs> IUpdateable.UpdateOrderChanged
+        { add { } remove { } }
 
         #endregion
     }

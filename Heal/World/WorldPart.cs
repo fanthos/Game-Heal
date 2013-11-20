@@ -60,7 +60,7 @@ namespace Heal.World
                 m_data.Pieces[type, m_mapData.X, m_mapData.Y];
             if(m_data.CollusionLayer == type)
             {
-                Texture2D shadow = new Texture2D(Heal.HealGame.Game.GraphicsDevice, ImageSize, ImageSize, 0, TextureUsage.None, SurfaceFormat.Color);
+                Texture2D shadow = new Texture2D(Heal.HealGame.Game.GraphicsDevice, ImageSize, ImageSize, false, SurfaceFormat.Color);
                 Color[] data = new Color[ImageSize * ImageSize];
                 texture2D.GetData( data );
                 byte[] infos = m_manager.MakeColorArrayToByte( data );

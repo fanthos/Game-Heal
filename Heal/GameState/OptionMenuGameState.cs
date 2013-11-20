@@ -207,7 +207,7 @@ namespace Heal.GameState
 
         public override void Draw(GameTime gameTime)
         {
-            SpriteManager.SpriteBatch.Begin( SpriteBlendMode.AlphaBlend, SpriteSortMode.Immediate, SaveStateMode.None );
+            SpriteManager.SpriteBatch.Begin( SpriteSortMode.Immediate, BlendState.AlphaBlend );
             foreach( ISprite sprite in m_optionMenuCollection )
             {
                 sprite.Draw( gameTime, SpriteManager.SpriteBatch );

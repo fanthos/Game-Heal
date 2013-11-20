@@ -56,8 +56,31 @@ namespace Heal.GameState
 
         public int DrawOrder { get { return 0; } }
 
-        public event EventHandler VisibleChanged;
-        public event EventHandler DrawOrderChanged;
+
+        event EventHandler<EventArgs> IDrawable.DrawOrderChanged
+        {
+            add {}
+            remove {}
+        }
+
+        event EventHandler<EventArgs> IDrawable.VisibleChanged
+        {
+            add {}
+            remove {}
+        }
+
+
+        event EventHandler<EventArgs> IUpdateable.EnabledChanged
+        {
+            add {}
+            remove {}
+        }
+
+        event EventHandler<EventArgs> IUpdateable.UpdateOrderChanged
+        {
+            add {}
+            remove {}
+        }
     }
 }
 

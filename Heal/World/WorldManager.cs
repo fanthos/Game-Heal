@@ -675,14 +675,15 @@ namespace Heal.World
             get { return true; }
         }
 
-        public event EventHandler EnabledChanged;
-
         public int UpdateOrder
         {
             get { return 0; }
         }
+        event EventHandler<EventArgs> IUpdateable.EnabledChanged
+        { add { } remove { } }
+        event EventHandler<EventArgs> IUpdateable.UpdateOrderChanged
+        { add { } remove { } }
 
-        public event EventHandler UpdateOrderChanged;
 
         #endregion
     }

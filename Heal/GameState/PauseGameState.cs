@@ -104,7 +104,7 @@ namespace Heal.GameState
 
         public override void Draw(GameTime gameTime)
         {
-            SpriteManager.SpriteBatch.Begin( SpriteBlendMode.AlphaBlend, SpriteSortMode.Immediate, SaveStateMode.None );
+            SpriteManager.SpriteBatch.Begin( SpriteSortMode.Immediate, BlendState.AlphaBlend );
             m_texPackaging.Draw( gameTime, SpriteManager.SpriteBatch );
             m_buttonPackaging.Draw( gameTime, SpriteManager.SpriteBatch );
             SpriteManager.SpriteBatch.End();

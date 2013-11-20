@@ -147,9 +147,11 @@ namespace Heal.World
         {
             get { throw new NotImplementedException(); }
         }
+        event EventHandler<EventArgs> IUpdateable.EnabledChanged
+        { add { } remove { } }
+        event EventHandler<EventArgs> IUpdateable.UpdateOrderChanged
+        { add { } remove { } }
 
-        public event EventHandler EnabledChanged;
-        public event EventHandler UpdateOrderChanged;
 
         #endregion
     }
