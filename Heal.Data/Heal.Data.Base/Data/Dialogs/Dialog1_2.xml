@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Heal.Core.GameData.DialogInfo">
+    <List>
+      <Item>
+        <Image1>m1</Image1>
+        <Image2>npc0</Image2>
+        <Talking>1</Talking>
+        <Line1>Wasn't expected these left </Line1>
+        <Line2>outs. This time you can't run</Line2>
+        <Line3>away.</Line3>
+      </Item>
+      <Item>
+        <Image1>m1</Image1>
+        <Image2>npc0</Image2>
+        <Talking>2</Talking>
+        <Line1>Get out of me, you bastards.</Line1>
+        <Line2>You ruined our village.</Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>m1</Image1>
+        <Image2>npc0</Image2>
+        <Talking>1</Talking>
+        <Line1>Hehe.</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>m1</Image1>
+        <Image2>npc0</Image2>
+        <Talking>2</Talking>
+        <Line1>Help.</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+    </List>
+    <PostTalk>Camera Play1_2</PostTalk>
+  </Asset>
+</XnaContent>

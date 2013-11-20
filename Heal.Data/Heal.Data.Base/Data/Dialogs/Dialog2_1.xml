@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Heal.Core.GameData.DialogInfo">
+    <List>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>npc0</Image2>
+        <Talking>2</Talking>
+        <Line1>I often come here. This place </Line1>
+        <Line2>makes me feel calm and </Line2>
+        <Line3>familiar.</Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>npc0</Image2>
+        <Talking>1</Talking>
+        <Line1>It's so beautiful here.</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>npc0</Image2>
+        <Talking>2</Talking>
+        <Line1>I'm an orphan, but people </Line1>
+        <Line2>around treat me very nice. </Line2>
+        <Line3>We're like a family. I </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>npc0</Image2>
+        <Talking>2</Talking>
+        <Line1>want to go save them </Line1>
+        <Line2>together with you.</Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>npc0</Image2>
+        <Talking>1</Talking>
+        <Line1>Ok, let's go.</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1></Image1>
+        <Image2></Image2>
+        <Talking>2</Talking>
+        <Line1>Collects items to open </Line1>
+        <Line2>new doors</Line2>
+        <Line3></Line3>
+      </Item>
+    </List>
+    <PostTalk>Resume</PostTalk>
+  </Asset>
+</XnaContent>

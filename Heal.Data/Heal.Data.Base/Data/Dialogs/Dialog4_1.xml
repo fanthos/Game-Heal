@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Heal.Core.GameData.DialogInfo">
+    <List>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>Are you Seven?</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>How do you know that?</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>Hehe, that beside you is the </Line1>
+        <Line2>key we are looking for. Give </Line2>
+        <Line3>it to me. Let me open </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>that door, and rebuild this </Line1>
+        <Line2>world.</Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>Never, he is my friend. I'll </Line1>
+        <Line2>protect him.</Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>Hehe. Is that so.</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>My job is to eliminate all </Line1>
+        <Line2>the virus, and recuperate </Line2>
+        <Line3>people's health. Wait </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>for you punishment.</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>People, haha, people, this is </Line1>
+        <Line2>the word I hate the most. </Line2>
+        <Line3>Take that now.</Line3>
+      </Item>
+    </List>
+    <PostTalk>Resume</PostTalk>
+  </Asset>
+</XnaContent>

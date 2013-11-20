@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Heal.Core.GameData.DialogInfo">
+    <List>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>How, how did this happen?</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>You... you are...</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>Yeah, I am you. I come from</Line1>
+        <Line2>the future to change this </Line2>
+        <Line3>world. I'll reform the </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>human, and make them </Line1>
+        <Line2>robots like us, so the </Line2>
+        <Line3>world will be hopeful.</Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>You're crazy. </Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>Crazy? In the future </Line1>
+        <Line2>human will destroy the </Line2>
+        <Line3>earth. Our emergence </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>makes them to act more </Line1>
+        <Line2>outrageous. I was just </Line2>
+        <Line3>like you before, doing </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>my best to serve people. </Line1>
+        <Line2>However, when I see this </Line2>
+        <Line3>lifeless, devastated </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>homeland that has been </Line1>
+        <Line2>destroyed by people, I </Line2>
+        <Line3>found all that I've </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>2</Talking>
+        <Line1>done before was wrong. </Line1>
+        <Line2>All I have is hostility.</Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>I don't know what will </Line1>
+        <Line2>happen in the future, but </Line2>
+        <Line3>I choose to believe </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>in the future. I prefer </Line1>
+        <Line2>believing in people.</Line2>
+        <Line3></Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>This world will not be </Line1>
+        <Line2>destroyed. I can feel </Line2>
+        <Line3>that the human are </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>different with us. They </Line1>
+        <Line2>have love. And just </Line2>
+        <Line3>because of this, </Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1>they can be aware of </Line1>
+        <Line2>their mistake, and </Line2>
+        <Line3>correct them.</Line3>
+      </Item>
+      <Item>
+        <Image1>seven</Image1>
+        <Image2>boss</Image2>
+        <Talking>1</Talking>
+        <Line1></Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+    </List>
+    <PostTalk>Resume</PostTalk>
+  </Asset>
+</XnaContent>

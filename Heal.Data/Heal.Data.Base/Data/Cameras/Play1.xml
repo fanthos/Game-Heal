@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Heal.Core.GameData.CameraInfo">
+    <List>
+      <Item>
+        <X>2000</X>
+        <Y>600</Y>
+        <Scale>0.7</Scale>
+        <Time>6</Time>
+      </Item>
+      <Item>
+        <X>2400</X>
+        <Y>600</Y>
+        <Scale>1.5</Scale>
+        <Time>3</Time>
+      </Item>
+      <Item>
+        <X>2000</X>
+        <Y>600</Y>
+        <Scale>0.8</Scale>
+        <Time>3</Time>
+      </Item>
+    </List>
+    <PostPlay>Resume</PostPlay>
+  </Asset>
+</XnaContent>

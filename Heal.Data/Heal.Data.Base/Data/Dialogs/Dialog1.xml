@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="Heal.Core.GameData.DialogInfo">
+    <List>
+      <Item>
+        <Image1>sevengray</Image1>
+        <Image2></Image2>
+        <Talking>1</Talking>
+        <Line1>Here is...</Line1>
+        <Line2></Line2>
+        <Line3></Line3>
+      </Item>
+    </List>
+    <PostTalk>Resume</PostTalk>
+  </Asset>
+</XnaContent>
