@@ -84,18 +84,18 @@ namespace Heal.Core.Entities
 
         public void AddEye(Texture2D eye)
         {
-            this.EyeColor = Microsoft.Xna.Framework.Graphics.Color.AliceBlue;
+            this.EyeColor = Color.AliceBlue;
             this.EyeTexure = eye;
         }
 
         public void AddHp(Texture2D hp_3, Texture2D hp_2, Texture2D hp_1)
         {
             this.HP_1.Add(new PicList(hp_1, 2, 80, (int)this.EnemySize,
-                                      Microsoft.Xna.Framework.Graphics.Color.AliceBlue, 100));
+                                      Color.AliceBlue, 100));
             this.HP_2.Add(new PicList(hp_2, 2, 80, (int)this.EnemySize,
-                          Microsoft.Xna.Framework.Graphics.Color.AliceBlue, 300));
+                          Color.AliceBlue, 300));
             this.HP_3.Add(new PicList(hp_3, 2, 80, (int)this.EnemySize,
-                          Microsoft.Xna.Framework.Graphics.Color.AliceBlue, 500));
+                          Color.AliceBlue, 500));
         }
 
         public void AddToUnable(Texture2D I, Texture2D II, Texture2D V)

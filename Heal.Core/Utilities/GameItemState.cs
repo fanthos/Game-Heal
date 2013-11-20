@@ -31,12 +31,18 @@ namespace Heal.Core.Utilities
 
         public static void Load()
         {
-            Guide.BeginShowStorageDeviceSelector(m_instance.FindStorageDevice, false);
+            if (!Guide.IsVisible)
+            {
+                StorageDevice.BeginShowSelector(m_instance.FindStorageDevice, false);
+            }
         }
 
         public static void Save()
         {
-            Guide.BeginShowStorageDeviceSelector( m_instance.FindStorageDevice, true );
+            if (!Guide.IsVisible)
+            {
+                StorageDevice.BeginShowSelector(m_instance.FindStorageDevice, true);
+            }
         }
 
         public static void Set( string key, object value )
@@ -56,18 +62,20 @@ namespace Heal.Core.Utilities
 
         private void FindStorageDevice(IAsyncResult result)
         {
-            StorageDevice sd = Guide.EndShowStorageDeviceSelector(result);
+            StorageDevice sd = StorageDevice.EndShowSelector(result);
             if (sd != null)
             {
-                StorageContainer container = sd.OpenContainer("Heal");
-                string filePath = Path.Combine(container.Path, "Config.dat");
+                StorageContainer container = XnaFixes.OpenContainer(sd, "Heal");
+                //string filePath = Path.Combine(container.Path, "Config.dat");
+                string filePath = "Config.dat";
                 DataContractSerializer dataContractSerializer = new DataContractSerializer(typeof(Dictionary<string, object>));
                 if ((bool)result.AsyncState)
                 {
                     try
                     {
                         //m_configs.
-                        FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate);
+                        //FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate);
+                        Stream stream = container.OpenFile(filePath, FileMode.OpenOrCreate);
                         dataContractSerializer.WriteObject(stream, m_configs);
                     }
                     catch{}
@@ -76,7 +84,8 @@ namespace Heal.Core.Utilities
                 {
                     try
                     {
-                        FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate);
+                        //FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate);
+                        Stream stream = container.OpenFile(filePath, FileMode.OpenOrCreate);
                         m_configs = (Dictionary<string, object>)dataContractSerializer.ReadObject(stream);
                     }
                     catch { }

@@ -29,7 +29,7 @@ namespace Heal.Utilities
                                                   m_device.PresentationParameters.BackBufferFormat);
             m_renderTarget2 = new RenderTarget2D(m_device, 800, 600, 1, m_device.PresentationParameters.
                                                                              BackBufferFormat);
-            m_resloveTexture = new ResolveTexture2D(m_device, 800, 600, 1, m_device.PresentationParameters.
+            m_resloveTexture = new RenderTarget2D(m_device, 800, 600, 1, m_device.PresentationParameters.
                                                                                 BackBufferFormat);
 
         }
@@ -47,7 +47,7 @@ namespace Heal.Utilities
 
         private RenderTarget2D m_renderTarget2;
 
-        private ResolveTexture2D m_resloveTexture;
+        private RenderTarget2D m_resloveTexture;
 
         private RenderTarget2D m_finallyTarget;
 
@@ -61,7 +61,7 @@ namespace Heal.Utilities
 
         public void Begin(RenderTarget2D target)
         {
-            Begin( target, Color.TransparentBlack );
+            Begin(target, Color.Transparent);
         }
 
         public void Begin(RenderTarget2D target, Color defaultColor)

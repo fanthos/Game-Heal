@@ -37,7 +37,7 @@ namespace Heal.GameState
 
         private SpriteBatch m_batch = new SpriteBatch( Heal.HealGame.Game.GraphicsDevice );
         private RenderTarget2D m_renderTarget2D;
-        private ResolveTexture2D m_resolveTarget;
+        private RenderTarget2D m_resolveTarget;
 
         private Texture2D m_renderTexture1;
         private Texture2D m_renderTexture2;
@@ -63,10 +63,10 @@ namespace Heal.GameState
         
             m_levels.Goto( "Map2" );
             player = m_world.Player;
-            m_renderTarget2D = new RenderTarget2D( HealGame.Game.GraphicsDevice, 800, 600, 1,
-                                                   HealGame.Game.GraphicsDevice.PresentationParameters.BackBufferFormat );
-            m_resolveTarget = new ResolveTexture2D( HealGame.Game.GraphicsDevice, 800, 600, 1,
-                                                  HealGame.Game.GraphicsDevice.PresentationParameters.BackBufferFormat );
+            m_renderTarget2D = new RenderTarget2D( HealGame.Game.GraphicsDevice, 800, 600, false,
+                                                   HealGame.Game.GraphicsDevice.PresentationParameters.BackBufferFormat, DepthFormat.Depth24Stencil8 );
+            m_resolveTarget = new RenderTarget2D( HealGame.Game.GraphicsDevice, 800, 600, false,
+                                                  HealGame.Game.GraphicsDevice.PresentationParameters.BackBufferFormat, DepthFormat.Depth24Stencil8);
                 //DataReader.Load<Effect>("Effect/Blur");
         }
 

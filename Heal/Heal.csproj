@@ -115,6 +115,7 @@
     <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="mscorlib">
       <Private>False</Private>
     </Reference>
@@ -252,10 +253,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Heal.Resources\Heal.Resources\Heal.Resources.csproj">
-      <Project>{CDC8F225-71BB-4BFE-AB72-C2AC87EBD9A2}</Project>
-      <Name>Heal.Resources</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Heal.Core\Heal.Core.csproj">
       <Project>{7548E52D-FF3E-4CB6-8813-6D6F23B289EB}</Project>
       <Name>Heal.Core</Name>

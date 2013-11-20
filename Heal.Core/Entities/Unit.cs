@@ -227,7 +227,7 @@ namespace Heal.Core.Entities
             public readonly int PicCount;
             public float Scale = 1;
             //输出的颜色
-            public Color Color = Microsoft.Xna.Framework.Graphics.Color.White;
+            public Color Color = Color.White;
 
             public PicList(Texture2D target, int picCount, int size, int oSize, Color color, float time)
             {

@@ -58,7 +58,7 @@ namespace Heal.World
                 if (colors[i].A < 100)
                 {
                     //bytes[i >> 3] |= (byte) ( 0x0 << ( i & 0x07 ))
-                    colors[i] = Color.TransparentBlack;
+                    colors[i] = Color.Transparent;
                 }
                 else
                 {
@@ -131,7 +131,7 @@ namespace Heal.World
         private MapManager.MapLoadingData m_data;
 
         private Texture2D m_loadingImage;
-        private ResolveTexture2D m_resolveTexture;
+        private RenderTarget2D m_resolveTexture;
 
         public enum RunningState
         {
@@ -264,9 +264,9 @@ namespace Heal.World
             m_regions = m_entityCreator.Regions;
             m_item = m_entityCreator.Items;
 
-            m_resolveTexture = new ResolveTexture2D(SpriteManager.SpriteBatch.GraphicsDevice, 800, 600, 1,
+            m_resolveTexture = new RenderTarget2D(SpriteManager.SpriteBatch.GraphicsDevice, 800, 600, false,
                                                      SpriteManager.SpriteBatch.GraphicsDevice.PresentationParameters.
-                                                         BackBufferFormat);
+                                                         BackBufferFormat, DepthFormat.Depth24Stencil8);
         }
 
         private void DrawLayer(int a, int b, GameTime gameTime, SpriteBatch batch)
@@ -346,7 +346,7 @@ namespace Heal.World
             m_effect.Draw(b => DrawLayer(m_layerCount, m_layerCount, gameTime, b), new[]{
                 new GraphicsManager.EffectDrawParameters(){Effect = "Wave",Pass = 1,Technique = 0},
                 new GraphicsManager.EffectDrawParameters(){Effect = "Blur",Pass = 0,Technique = 0}
-                               }, Color.TransparentBlack);
+                               }, Color.Transparent);
 
             m_effect.Draw(b => DrawLayer(m_collusionLayer, m_collusionLayer, gameTime, b));
 
@@ -363,7 +363,7 @@ namespace Heal.World
             {
                 m_freezeTime += (float) gameTime.ElapsedGameTime.TotalSeconds;
                 m_effect.Parameters("Mosaic", "Intensity").SetValue((float)Math.Sin(m_freezeTime * Math.PI * 2) * .03f);
-                SpriteManager.SpriteBatch.GraphicsDevice.ResolveBackBuffer(m_resolveTexture);
+                SpriteManager.SpriteBatch.GraphicsDevice.SetRenderTarget(m_resolveTexture);
                 m_effect.Draw(b => b.Draw(m_resolveTexture, Vector2.Zero, Color.White),
                                new GraphicsManager.EffectDrawParameters() {Effect = "Mosaic", Pass = 0, Technique = 0},
                                Color.White );
@@ -391,7 +391,7 @@ namespace Heal.World
                 this.UpdateDraw(new GameTime());
                 AIControler.Update(new GameTime(), m_units, m_item, Player);
                 DrawRunning(new GameTime(), SpriteManager.SpriteBatch);
-                SpriteManager.SpriteBatch.GraphicsDevice.ResolveBackBuffer(m_resolveTexture);
+                SpriteManager.SpriteBatch.GraphicsDevice.SetRenderTarget(m_resolveTexture);
                 m_dialog.Load(param.ToString(), m_resolveTexture);
             }
             else if (runningState == RunningState.Viewing)
@@ -409,7 +409,7 @@ namespace Heal.World
             this.UpdateDraw(new GameTime());
             AIControler.Update(new GameTime(), m_units, m_item, Player);
             DrawRunning(new GameTime(), SpriteManager.SpriteBatch);
-            SpriteManager.SpriteBatch.GraphicsDevice.ResolveBackBuffer(m_resolveTexture);
+            SpriteManager.SpriteBatch.GraphicsDevice.SetRenderTarget(m_resolveTexture);
             return m_resolveTexture;
         }
 

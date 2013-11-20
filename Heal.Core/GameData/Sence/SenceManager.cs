@@ -6,6 +6,7 @@ using Heal.Core.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Entity = Heal.Core.Entities.Entity;
+using IUpdateable = Heal.Core.Utilities.IUpdateable;
 
 namespace Heal.Core.Sence
 {

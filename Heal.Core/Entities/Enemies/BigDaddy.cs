@@ -342,7 +342,8 @@ namespace Heal.Core.Entities.Enemies
             {
                 this.Ball = Ball;
                 this.Postion = Postion;
-                this.Color = Color.TransparentWhite;
+                this.Color = new Color(1f, 1f, 1f, 0f);
+                //this.Color = Color.TransparentWhite;
                 this.Speed = Speed;
             }
 

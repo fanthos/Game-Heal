@@ -164,7 +164,7 @@ namespace Heal.Core
                         index++;
                     }
                     this.updateableComponents.Insert(index, gameComponent);
-                    gameComponent.UpdateOrderChanged += new EventHandler(this.UpdateableUpdateOrderChanged);
+                    gameComponent.UpdateOrderChanged += this.UpdateableUpdateOrderChanged;
                 }
             }
             IDrawable item = e.GameComponent as IDrawable;
@@ -179,7 +179,7 @@ namespace Heal.Core
                         num2++;
                     }
                     this.drawableComponents.Insert(num2, item);
-                    item.DrawOrderChanged += new EventHandler(this.DrawableDrawOrderChanged);
+                    item.DrawOrderChanged += this.DrawableDrawOrderChanged;
                 }
             }
         }
@@ -190,13 +190,13 @@ namespace Heal.Core
             if (gameComponent != null)
             {
                 this.updateableComponents.Remove(gameComponent);
-                gameComponent.UpdateOrderChanged -= new EventHandler(this.UpdateableUpdateOrderChanged);
+                gameComponent.UpdateOrderChanged -= this.UpdateableUpdateOrderChanged;
             }
             IDrawable item = e.GameComponent as IDrawable;
             if (item != null)
             {
                 this.drawableComponents.Remove(item);
-                item.DrawOrderChanged -= new EventHandler(this.DrawableDrawOrderChanged);
+                item.DrawOrderChanged -= this.DrawableDrawOrderChanged;
             }
         }
 
