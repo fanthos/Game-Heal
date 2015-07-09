@@ -67,7 +67,7 @@ namespace Heal.Utilities
         public void Begin(RenderTarget2D target, Color defaultColor)
         {
         //RenderTarget2D oldTarget = (RenderTarget2D)m_batch.GraphicsDevice.GetRenderTarget(0);
-            var renderTargets = m_device.GetRenderTargets();
+            var renderTargets = m_batch.GraphicsDevice.GetRenderTargets();
             if (renderTargets.Length == 0)
             {
                 m_finallyTarget = null;
@@ -78,7 +78,7 @@ namespace Heal.Utilities
             }
             m_target.Push( m_finallyTarget );
             m_finallyTarget = target;
-            m_device.SetRenderTarget(m_finallyTarget);
+            m_batch.GraphicsDevice.SetRenderTarget(m_finallyTarget);
             m_batch.GraphicsDevice.Clear(defaultColor);
         }
 
@@ -86,7 +86,7 @@ namespace Heal.Utilities
         {
             //m_batch.GraphicsDevice.SetRenderTarget(0, target);
             m_finallyTarget = m_target.Pop();
-            m_device.SetRenderTarget( null );
+            m_batch.GraphicsDevice.SetRenderTarget(null);
         }
 
         internal SpriteFont Fonts(string fontName)
@@ -114,8 +114,8 @@ namespace Heal.Utilities
         public void Draw(ItemDrawer drawer, EffectDrawParameters[] parameters, Color defaultColor)
         {
             //m_renderTarget1 = m_finallyTarget;
-            m_device.SetRenderTarget( null);
-            m_device.SetRenderTarget(m_resloveTexture);
+            //m_device.SetRenderTarget( null);
+            //m_device.SetRenderTarget(m_resloveTexture);
             m_batch.GraphicsDevice.SetRenderTarget( m_renderTarget1);
             m_batch.GraphicsDevice.Clear(defaultColor);
             m_batch.Begin( SpriteSortMode.Deferred, BlendState.AlphaBlend);
@@ -132,13 +132,13 @@ namespace Heal.Utilities
                 m_renderTarget2 = temp;
             }
             m_batch.GraphicsDevice.SetRenderTarget( m_finallyTarget);
-            m_batch.GraphicsDevice.Clear( Color.White );
+            //m_batch.GraphicsDevice.Clear( Color.White );
             m_batch.Begin( SpriteSortMode.Deferred, BlendState.AlphaBlend);
             m_batch.Draw(m_resloveTexture, new Rectangle(0, 0, 800, 600), Color.White);
             m_batch.Draw(m_renderTarget1, new Rectangle(0, 0, 800, 600), Color.White);
             m_batch.End();
 
-            m_device.SetRenderTarget( null );
+            m_batch.GraphicsDevice.SetRenderTarget(null);
         }
 
         public void Draw(ItemDrawer drawer, EffectDrawParameters param, Color color)
@@ -163,11 +163,12 @@ namespace Heal.Utilities
                 m_effects.Add(param.Effect, effect);
             }
             m_batch.GraphicsDevice.SetRenderTarget(target);
-            m_batch.Begin( SpriteSortMode.Immediate, BlendState.Opaque);
+            //m_batch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
             effect.CurrentTechnique = effect.Techniques[param.Technique];
             //effect.Begin();
             //effect.CurrentTechnique.Passes[param.Pass].Begin();
-            effect.CurrentTechnique.Passes[param.Pass].Apply();
+            //effect.CurrentTechnique.Passes[param.Pass].Apply();
+            m_batch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, effect);
             m_batch.Draw(source, new Rectangle(0, 0, 800, 600), Color.White);
             m_batch.End();
             //effect.CurrentTechnique.Passes[param.Pass].End();

@@ -148,7 +148,8 @@ namespace Heal.GameState
             {
                 AddNewGameState( type );
             }
-            this.GotoState( DefaultState, null );
+            //this.GotoState( DefaultState, null );
+            this.GotoState(States.RunningGameState, null);
         }
 
         private void AddNewGameState(Type state)

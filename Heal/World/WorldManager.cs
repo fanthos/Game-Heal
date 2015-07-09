@@ -343,10 +343,10 @@ namespace Heal.World
         {
             m_effect.Draw(b => DrawLayer(0, m_collusionLayer, gameTime, b));
 
-            m_effect.Draw(b => DrawLayer(m_layerCount, m_layerCount, gameTime, b), new[]{
-                new GraphicsManager.EffectDrawParameters(){Effect = "Wave",Pass = 1,Technique = 0},
-                new GraphicsManager.EffectDrawParameters(){Effect = "Blur",Pass = 0,Technique = 0}
-                               }, Color.Transparent);
+            //m_effect.Draw(b => DrawLayer(m_layerCount, m_layerCount, gameTime, b), new[]{
+            //    new GraphicsManager.EffectDrawParameters(){Effect = "Wave",Pass = 1,Technique = 0},
+            //    new GraphicsManager.EffectDrawParameters(){Effect = "Blur",Pass = 0,Technique = 0}
+            //                   }, Color.Transparent);
 
             m_effect.Draw(b => DrawLayer(m_collusionLayer, m_collusionLayer, gameTime, b));
 

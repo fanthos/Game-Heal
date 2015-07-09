@@ -45,9 +45,6 @@ namespace Heal.GameState
 
         public int UpdateOrder { get { return 0; } }
 
-        public event EventHandler EnabledChanged;
-        public event EventHandler UpdateOrderChanged;
-
         public abstract void Initialize();
 
         public abstract void Draw(GameTime gameTime);
