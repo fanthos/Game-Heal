@@ -1,0 +1,219 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin
+/intermediateDir:obj
+/platform:WindowsGL
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Effect/Screw.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effect/Screw.fx
+
+#begin Data/Maps/Map0.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map0.xml
+
+#begin Effect/Wave.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effect/Wave.fx
+
+#begin Effect/Mosaic.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effect/Mosaic.fx
+
+#begin Data/Maps/Map1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map1.xml
+
+#begin Data/Maps/Map9.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map9.xml
+
+#begin Data/Maps/Map3.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map3.xml
+
+#begin Data/Maps/Map7.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map7.xml
+
+#begin Data/Maps/Map2.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map2.xml
+
+#begin Data/Maps/Map4.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map4.xml
+
+#begin Data/Maps/Map5.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map5.xml
+
+#begin Data/Maps/Map6.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map6.xml
+
+#begin Data/Maps/Map8.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map8.xml
+
+#begin Data/Maps/Map13.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map13.xml
+
+#begin Data/Maps/Map12.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map12.xml
+
+#begin Data/Maps/Map11.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map11.xml
+
+#begin Data/Maps/Map10.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map10.xml
+
+#begin Data/Maps/Map14.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map14.xml
+
+#begin Data/Maps/Map15.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map15.xml
+
+#begin Effect/Blur.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effect/Blur.fx
+
+#begin Data/Dialogs/Dialog1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog1.xml
+
+#begin Data/Cameras/Play1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Cameras/Play1.xml
+
+#begin Data/Dialogs/Dialog0_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog0_1.xml
+
+#begin Data/Dialogs/Dialog0_2.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog0_2.xml
+
+#begin Data/Cameras/Play0_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Cameras/Play0_1.xml
+
+#begin Data/Dialogs/Dialog0_t1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog0_t1.xml
+
+#begin Data/Dialogs/Dialog1_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog1_1.xml
+
+#begin Data/Cameras/Play1_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Cameras/Play1_1.xml
+
+#begin Data/Dialogs/Dialog1_2.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog1_2.xml
+
+#begin Data/Cameras/Play1_2.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Cameras/Play1_2.xml
+
+#begin Data/Dialogs/Dialog1_3.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog1_3.xml
+
+#begin Data/Dialogs/Dialog2_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog2_1.xml
+
+#begin Data/Cameras/play7_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Cameras/play7_1.xml
+
+#begin Data/Cameras/Play0_0.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Cameras/Play0_0.xml
+
+#begin Data/Dialogs/Dialog4_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog4_1.xml
+
+#begin Data/Dialogs/Dialog5.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Dialog5.xml
+
+#begin Data/Maps/Map17.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map17.xml
+
+#begin Data/Maps/Map16.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map16.xml
+
+#begin Data/Maps/Map18.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Maps/Map18.xml
+
+#begin Data/Dialogs/Copy of Dialog4_1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:Data/Dialogs/Copy of Dialog4_1.xml
+

@@ -10,7 +10,7 @@ namespace Heal.Data
         public CompressedFileManager(string filename)
         {
             //m_strFile.Add(filename);
-            OpenFile(filename);
+            //OpenFile(filename);
         }
 
         public CompressedFileManager()

@@ -61,7 +61,7 @@ namespace Heal.World
         {
             DialogText text = m_dialog.List[m_talkState];
             Color img1 = Color.White, img2 = Color.White;
-            batch.Draw( m_backGround, Vector2.Zero, null, Color.DarkGray );
+            //batch.Draw( m_backGround, Vector2.Zero, null, Color.DarkGray );
             switch(text.Talking)
             {
                 case 0:

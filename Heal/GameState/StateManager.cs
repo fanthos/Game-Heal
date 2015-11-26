@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Heal.Data;
 
 namespace Heal.GameState
 {
@@ -111,6 +112,7 @@ namespace Heal.GameState
         private States m_runningState;
         private GameState m_nowState;
         private GameState m_drawingState;
+        private DataReader m_dataReader;
 
         /// <summary>
         /// Gets or sets the game state of the running.
@@ -149,6 +151,7 @@ namespace Heal.GameState
                 AddNewGameState( type );
             }
             //this.GotoState( DefaultState, null );
+            //this.GotoState(States.MainMenuState, null);
             this.GotoState(States.RunningGameState, null);
         }
 
@@ -161,6 +164,7 @@ namespace Heal.GameState
         {
             m_drawingState = m_nowState;
             m_nowState.Update( gameTime );
+            DataReader.SyncCallback();
         }
 
         public void Draw(GameTime gameTime)

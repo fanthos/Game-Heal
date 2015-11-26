@@ -9,6 +9,7 @@ using Heal.Data;
 using Heal.Sprites;
 using Heal.Core.Sence;
 using Heal.Levels;
+using System.Threading;
 
 namespace Heal.World
 {
@@ -36,6 +37,7 @@ namespace Heal.World
             m_layers = new MapDrawer[count +1];
             string path = "Maps/" + mapDataList.Name + "/";
             m_locate = new Vector2(data.X * ImageSize, data.Y * ImageSize);
+
             foreach( var textureInfo in data.List)
             {
                 DataReader.LoadAsync<Texture2D>( path + textureInfo.Texture, LoadingItemCallback, textureInfo.Layer );
@@ -62,7 +64,7 @@ namespace Heal.World
             {
                 Texture2D shadow = new Texture2D(Heal.HealGame.Game.GraphicsDevice, ImageSize, ImageSize, false, SurfaceFormat.Color);
                 Color[] data = new Color[ImageSize * ImageSize];
-                texture2D.GetData( data );
+                texture2D.GetData<Color>( data );
                 byte[] infos = m_manager.MakeColorArrayToByte( data );
                 m_mapData.CollusionTexture = infos;
                 shadow.SetData( data );

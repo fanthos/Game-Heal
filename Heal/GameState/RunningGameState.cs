@@ -60,8 +60,9 @@ namespace Heal.GameState
             m_effect = GraphicsManager.GetInstance();
             m_stateManager = StateManager.GetInstance();
             //m_levels.Load( "Map6" );
-        
-            m_levels.Goto( "Map2" );
+
+            m_levels.Goto( "Map0" );
+            //m_levels.Load("Map0");
             player = m_world.Player;
             m_renderTarget2D = new RenderTarget2D( HealGame.Game.GraphicsDevice, 800, 600, false,
                                                    HealGame.Game.GraphicsDevice.PresentationParameters.BackBufferFormat, DepthFormat.Depth24Stencil8 );

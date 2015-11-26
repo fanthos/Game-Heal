@@ -116,6 +116,7 @@ namespace Heal.Utilities
             //m_renderTarget1 = m_finallyTarget;
             //m_device.SetRenderTarget( null);
             //m_device.SetRenderTarget(m_resloveTexture);
+            var tgt = m_batch.GraphicsDevice.GetRenderTargets()[0].RenderTarget;
             m_batch.GraphicsDevice.SetRenderTarget( m_renderTarget1);
             m_batch.GraphicsDevice.Clear(defaultColor);
             m_batch.Begin( SpriteSortMode.Deferred, BlendState.AlphaBlend);
@@ -131,14 +132,7 @@ namespace Heal.Utilities
                 m_renderTarget1 = m_renderTarget2;
                 m_renderTarget2 = temp;
             }
-            m_batch.GraphicsDevice.SetRenderTarget( m_finallyTarget);
-            //m_batch.GraphicsDevice.Clear( Color.White );
-            m_batch.Begin( SpriteSortMode.Deferred, BlendState.AlphaBlend);
-            m_batch.Draw(m_resloveTexture, new Rectangle(0, 0, 800, 600), Color.White);
-            m_batch.Draw(m_renderTarget1, new Rectangle(0, 0, 800, 600), Color.White);
-            m_batch.End();
-
-            m_batch.GraphicsDevice.SetRenderTarget(null);
+            m_batch.GraphicsDevice.SetRenderTarget(tgt);
         }
 
         public void Draw(ItemDrawer drawer, EffectDrawParameters param, Color color)
@@ -159,16 +153,17 @@ namespace Heal.Utilities
             Effect effect;
             if (!m_effects.TryGetValue(param.Effect, out effect))
             {
-                effect = DataReader.Load<Effect>("Effect/" + param.Effect);
+                // effect = DataReader.Load<Effect>("Effect/" + param.Effect);
                 m_effects.Add(param.Effect, effect);
             }
             m_batch.GraphicsDevice.SetRenderTarget(target);
             //m_batch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
-            effect.CurrentTechnique = effect.Techniques[param.Technique];
+            // effect.CurrentTechnique = effect.Techniques[param.Technique];
             //effect.Begin();
             //effect.CurrentTechnique.Passes[param.Pass].Begin();
             //effect.CurrentTechnique.Passes[param.Pass].Apply();
-            m_batch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, effect);
+            //m_batch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, effect);
+            m_batch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null);
             m_batch.Draw(source, new Rectangle(0, 0, 800, 600), Color.White);
             m_batch.End();
             //effect.CurrentTechnique.Passes[param.Pass].End();

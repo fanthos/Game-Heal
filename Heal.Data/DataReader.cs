@@ -21,15 +21,15 @@ namespace Heal.Data
             m_running = true;
             m_loadingItems = new Queue<LoadAsyncInfo>();
             m_callback = new Queue<PostLoadItemProc>();
-            m_loadingThread = new Thread(LoadingProcess) {Priority = ThreadPriority.Lowest};
+            m_loadingThread = new Thread(LoadingProcess) {Priority = ThreadPriority.Lowest, Name = "Loading Thread" };
             m_loadingThread.Start();
-            m_callbackThread = new Thread(PostLoadingProcess) {Priority = ThreadPriority.Lowest};
-            m_callbackThread.Start();
+            //m_callbackThread = new Thread(PostLoadingProcess) {Priority = ThreadPriority.Lowest, Name = "Loading Callback Thread"};
+            //m_callbackThread.Start();
         }
 
         public static void Initialize( Thread mainThread )
         {
-            Core.Utilities.CoreUtilities.MainThread = mainThread;
+            CoreUtilities.MainThread = mainThread;
             m_instance = new DataReader();
         }
 
@@ -69,22 +69,22 @@ namespace Heal.Data
             }
         }
 
-        private void PostLoadingProcess()
+        public static void SyncCallback()
         {
-            while (CoreUtilities.Running)
+            m_instance.InternalSyncCallback();
+        }
+        private void InternalSyncCallback()
+        {
+            while( m_callback.Count > 0 )
             {
-                Thread.Sleep( 50 );
-                while( m_callback.Count > 0 )
+                if( !m_running ) return;
+                var info = m_callback.Dequeue();
+                try
                 {
-                    if( !m_running ) return;
-                    var info = m_callback.Dequeue();
-                    try
-                    {
-                        info();
-                    }
-                    finally
-                    {
-                    }
+                    info();
+                }
+                finally
+                {
                 }
             }
         }

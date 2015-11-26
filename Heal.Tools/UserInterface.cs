@@ -27,16 +27,12 @@ namespace Heal.Tools
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            try
+            //try
             {
                 var item = (ToolsManager.ToolInformation) lstItems.SelectedItem;
                 Form form = (Form)Activator.CreateInstance( item.WindowType );
                 //form.FormClosed+=delegate { this.Visible = true; };
                 form.ShowDialog( );
-            }
-            catch
-            {
-                
             }
         }
 

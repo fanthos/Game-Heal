@@ -13,7 +13,7 @@ namespace Heal.Data
 {
     public class DataManager : ContentManager
     {
-        CompressedFileManager m_fileManager = new MpqFileManager();
+        CompressedFileManager m_fileManager = new ZipFileManager("content");
 
         private object m_streamLock1 = new object();
         private object m_streamLock2 = new object();
@@ -135,13 +135,13 @@ namespace Heal.Data
         [DebuggerHidden]
         public void OpenFile(string filename)
         {
-            m_fileManager.OpenFile(filename + ".heal");
+            m_fileManager.OpenFile(filename);
         }
 
         [DebuggerHidden]
         public void OpenPatch(string filename)
         {
-            m_fileManager.OpenPatch(filename + ".heal");
+            m_fileManager.OpenPatch(filename);
         }
 
         /*
